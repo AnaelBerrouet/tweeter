@@ -1,8 +1,9 @@
 .new-tweet {
   border-radius: 10px;
+  margin: 2em;
+
   background-color: #eee;
   border: 1px solid #ddd;
-  margin: 2em;
 }
 
 .new-tweet h2 {
