@@ -20,6 +20,10 @@ body {
   background-color: #eee;
 }
 
+body * {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
