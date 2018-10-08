@@ -1,0 +1,33 @@
+.new-tweet {
+  border-radius: 10px;
+  background-color: #eee;
+  border: 1px solid #ddd;
+  margin: 2em;
+}
+
+.new-tweet h2 {
+  /*text-decoration: underline;*/
+  border-bottom: 2px solid black;
+  margin: 5px 10px;
+}
+
+.new-tweet form {
+  margin: 0 10px;
+  /*text-align: center;*/
+}
+
+.new-tweet textarea {
+  display: inline-block;
+  width: 100%;
+}
+
+.new-tweet input {
+  margin: 0 auto 10px 0;
+}
+
+.new-tweet span {
+  font-style: italic;
+  color: #00a087;
+  margin: auto;
+  float: right;
+}
