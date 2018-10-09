@@ -1,0 +1,66 @@
+article.tweet {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 2em;
+}
+
+article.tweet:hover {
+  border: 1px solid #ccc;
+}
+
+article.tweet:hover header {
+  background-color: #eee;
+  filter: brightness(1);
+}
+
+article.tweet header {
+  background-color: #e1e1e1;
+  height: 50px;
+  filter: brightness(1.1);
+}
+
+article.tweet header #avatar {
+  width: 40px;
+  height: auto;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+article.tweet header #name {
+  display: inline-block;
+  margin: 7px auto auto 5px;
+  vertical-align: top;
+}
+
+article.tweet header #handle {
+  float: right;
+  vertical-align: top;
+  margin: 8px 5px;
+
+  font-size: 1em;
+  color: #ccc;
+}
+
+article.tweet #content {
+  height: 60px;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+  padding: 5px 10px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  /*vertical-align: middle;*/
+}
+
+article.tweet footer #timestamp{
+  margin: 10px 5px;
+  font-size: 0.5em;
+}
+
+
+
+
+
+
+
+
