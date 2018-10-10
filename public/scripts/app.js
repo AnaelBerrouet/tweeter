@@ -64,6 +64,7 @@ $(document).ready(function() {
   const $form = $('#tweet-submit').submit( function(event) {
     event.preventDefault();
 
+    //ESCAPE DANGEROUS CHARACTERS
     const safeTweet = escape($(this).children('textarea').val());
     console.log(safeTweet);
     $(this).children('textarea').val(safeTweet);
@@ -83,7 +84,7 @@ $(document).ready(function() {
     }
   });
 
-  const $composeButton = $('#compose-button').on('click', function(event) {
+  $('#compose-button').on('click', function(event) {
     $('.new-tweet').slideToggle();
     $('#tweet-submit textarea').focus();
   });
