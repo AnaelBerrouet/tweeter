@@ -53,10 +53,20 @@ $(document).ready(function() {
       });
   }
 
+  function escape(str) {
+    var div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }
+
 
   //AJAX CONTROLLER FOR TWEEET SUBMIT
   const $form = $('#tweet-submit').submit( function(event) {
     event.preventDefault();
+
+    const safeTweet = escape($(this).children('textarea').val());
+    console.log(safeTweet);
+    $(this).children('textarea').val(safeTweet);
     const data = $(this).serialize();
 
     //CHECK VALID TWEET STATUS
@@ -71,6 +81,11 @@ $(document).ready(function() {
       $(this).find('textarea').val("");
       $(this).find('.counter').text("140");
     }
+  });
+
+  const $composeButton = $('#compose-button').on('click', function(event) {
+    $('.new-tweet').slideToggle();
+    $('#tweet-submit textarea').focus();
   });
 
   loadTweets();
