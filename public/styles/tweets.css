@@ -53,7 +53,6 @@ article.tweet .content {
   display: flex;
   align-items: center;
   word-break: break-all;
-
 }
 
 article.tweet footer .timestamp{

@@ -30,3 +30,17 @@
   margin: auto;
   float: right;
 }
+
+.new-tweet .error-wrapper {
+  display: none;
+  margin: 0;
+}
+
+.new-tweet .error {
+  display: flex;
+  align-items: center;
+  margin: 1px 2px 2px 2px;
+
+  background-color: rgba(237, 28, 21, 0.5);
+  color: rgba(237, 28, 21, 0.9)
+}

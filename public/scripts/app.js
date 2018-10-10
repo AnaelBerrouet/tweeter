@@ -64,24 +64,39 @@ $(document).ready(function() {
   const $form = $('#tweet-submit').submit( function(event) {
     event.preventDefault();
 
-    //ESCAPE DANGEROUS CHARACTERS
-    const safeTweet = escape($(this).children('textarea').val());
-    console.log(safeTweet);
-    $(this).children('textarea').val(safeTweet);
-    const data = $(this).serialize();
+    //CLEAR ANY ERROR PREVIOUS MESSAGE
+    $('#tweet-submit .error-wrapper').slideUp(100, () => {
+        $('#tweet-submit .error').empty();
 
-    //CHECK VALID TWEET STATUS
-    const tweetCharsRemaining = Number($(this).find('.counter').text());
-    if(tweetCharsRemaining < 0) {
-      alert("Over character limit!");
-    } else if(tweetCharsRemaining === 140) {
-      alert("Empty tweet!");
-    } else {
-      //SUBMIT POST REQUEST AND REFRESH TWEET FEED
-      $.ajax('/tweets/', {method: 'POST', data: data}).done(loadTweets);
-      $(this).find('textarea').val("");
-      $(this).find('.counter').text("140");
-    }
+        //ESCAPE DANGEROUS CHARACTERS
+        const safeTweet = escape($(this).children('textarea').val());
+        $(this).children('textarea').val(safeTweet);
+        const data = $(this).serialize();
+
+        //CHECK VALID TWEET STATUS
+        const tweetCharsRemaining = Number($(this).find('.counter').text());
+        if(tweetCharsRemaining < 0) {
+          $('#tweet-submit .error').append(`
+            <i class="material-icons">
+              clear
+            </i>
+            Over character limit!
+            `);
+          $('#tweet-submit .error-wrapper').slideDown(300);
+        } else if(tweetCharsRemaining === 140) {
+            $('#tweet-submit .error').append(`
+              <i class="material-icons">
+                clear
+              </i>
+              Empty tweet!`);
+            $('#tweet-submit .error-wrapper').slideDown(300);
+        } else {
+          //SUBMIT POST REQUEST AND REFRESH TWEET FEED
+          $.ajax('/tweets/', {method: 'POST', data: data}).done(loadTweets);
+          $(this).find('textarea').val("");
+          $(this).find('.counter').text("140");
+        }
+      });
   });
 
   $('#compose-button').on('click', function(event) {
