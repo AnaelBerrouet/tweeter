@@ -29,10 +29,31 @@ module.exports = function(DataHelpers) {
       content: {
         text: req.body.text
       },
-      created_at: Date.now()
+      created_at: Date.now(),
+      likes: 0
     };
 
     DataHelpers.saveTweet(tweet, (err) => {
+      if (err) {
+        res.status(500).json({ error: err.message });
+      } else {
+        res.status(201).send();
+      }
+    });
+  });
+
+  tweetsRoutes.put("/:id", function(req, res) {
+    if (!req.body) {
+      res.status(400).json({ error: 'invalid request: no data in PUT body'});
+      return;
+    }
+
+    const tweetUpdate = {
+      tweetId: req.body.tweetId,
+      likes: req.body.likes
+    };
+
+    DataHelpers.updateTweet(tweetUpdate, (err) => {
       if (err) {
         res.status(500).json({ error: err.message });
       } else {

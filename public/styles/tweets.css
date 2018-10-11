@@ -55,9 +55,41 @@ article.tweet .content {
   word-break: break-all;
 }
 
+article.tweet footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 article.tweet footer .timestamp{
   margin: 10px 5px;
   font-size: 0.5em;
+}
+
+article.tweet footer .likes{
+  display: flex;
+  align-items: center;
+
+  margin: 10px 5px;
+  font-size: 0.5em;
+}
+
+article.tweet footer .likes .like-symbol-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 0;
+
+  border: none;
+/*  color: none;
+  background-color: none;*/
+}
+
+article.tweet footer .likes .like-symbol-wrapper .material-icons {
+  font-size: 2em;
+  color: grey;
+}
+
+article.tweet footer .likes .like-symbol-wrapper .material-icons:hover, article.tweet footer .likes .like-symbol-wrapper .material-icons.clicked {
+  color: red;
 }
 
 
