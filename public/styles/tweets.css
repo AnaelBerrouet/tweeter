@@ -79,8 +79,7 @@ article.tweet footer .likes .like-symbol-wrapper {
   padding: 0;
 
   border: none;
-/*  color: none;
-  background-color: none;*/
+  background-color: transparent;
 }
 
 article.tweet footer .likes .like-symbol-wrapper .material-icons {
