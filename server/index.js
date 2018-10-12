@@ -11,8 +11,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 //Database setup:
+require('dotenv').config();
 const MongoClient = require("mongodb").MongoClient;
-const MONGODB_URI = "mongodb://localhost:27017/tweeter";
+const MONGODB_URI = process.env.MONGODB_URI;
+
 
 //Connect to DB and listen:
 MongoClient.connect(MONGODB_URI, (err, db) => {
