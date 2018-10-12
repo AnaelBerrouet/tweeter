@@ -4,7 +4,12 @@ Tweeter is a simple, single-page Twitter clone.
 
 [Also hosted here](https://peaceful-taiga-98803.herokuapp.com/)
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB back-end skills.
+![Full twitter](https://github.com/AnaelBerrouet/tweeter/blob/master/fullTweeter.png)
+
+![Responsive twitter](https://github.com/AnaelBerrouet/tweeter/blob/master/responsiveTweeter.png)
+
+
+Built upon starter code forked from Lighthouse Labs and then built upon to practice HTML, CSS-SCSS, JS, jQuery and AJAX front-end skills, and Node, Express and MongoDB back-end skills.
 
 ## Getting Started
 
