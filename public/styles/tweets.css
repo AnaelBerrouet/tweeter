@@ -3,98 +3,87 @@ article.tweet {
   border-radius: 5px;
   margin: 2em;
 }
-
-article.tweet:hover {
-  border: 1px solid #ccc;
-}
-
-article.tweet:hover header {
-  background-color: #eee;
-  filter: brightness(1);
-}
-
 article.tweet header {
   background-color: #e1e1e1;
   height: 50px;
   filter: brightness(1.1);
 }
-
 article.tweet header .avatar {
   width: 40px;
   height: auto;
   margin: 5px;
   border-radius: 5px;
 }
-
 article.tweet header .name {
   display: inline-block;
   margin: 7px auto auto 5px;
   vertical-align: top;
 }
-
-article.tweet header .handle {
-  float: right;
-  vertical-align: top;
-  margin: 8px 5px;
-
-  font-size: 1em;
-  color: #ccc;
+@media (min-width: 375px) {
+  article.tweet header .handle {
+    float: right;
+    vertical-align: top;
+    margin: 8px 5px;
+    font-size: 1em;
+    color: #ccc;
+  }
 }
-
+@media (max-width: 375px) {
+  article.tweet header .handle {
+    float: right;
+    vertical-align: top;
+    margin: 8px 5px;
+    font-size: 0.6em;
+    color: #ccc;
+  }
+}
 article.tweet .content {
   min-height: 60px;
-  min-width: 360px;*/
   background-color: white;
   border-bottom: 1px solid #ddd;
   padding: 5px 10px;
   margin: 0;
   vertical-align: middle;
-
   display: flex;
   align-items: center;
   word-break: break-all;
 }
-
-article.tweet footer{
+article.tweet footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-article.tweet footer .timestamp{
+article.tweet footer .timestamp {
   margin: 10px 5px;
   font-size: 0.5em;
 }
-
-article.tweet footer .likes{
+article.tweet footer .likes {
   display: flex;
   align-items: center;
-
   margin: 10px 5px;
   font-size: 0.5em;
 }
-
 article.tweet footer .likes .like-symbol-wrapper {
   display: flex;
   align-items: center;
   padding: 0;
-
   border: none;
   background-color: transparent;
 }
-
 article.tweet footer .likes .like-symbol-wrapper .material-icons {
   font-size: 2em;
   color: grey;
 }
-
 article.tweet footer .likes .like-symbol-wrapper .material-icons:hover, article.tweet footer .likes .like-symbol-wrapper .material-icons.clicked {
   color: red;
 }
 
+article.tweet:hover {
+  border: 1px solid #ccc;
+}
+article.tweet:hover header {
+  background-color: #eee;
+  filter: brightness(1);
+}
 
-
-
-
-
-
-
+/*# sourceMappingURL=tweets.css.map */

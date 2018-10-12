@@ -1,0 +1,113 @@
+article.tweet {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 2em;
+
+  header {
+    background-color: #e1e1e1;
+    height: 50px;
+    filter: brightness(1.1);
+
+    .avatar {
+      width: 40px;
+      height: auto;
+      margin: 5px;
+      border-radius: 5px;
+    }
+
+    .name {
+      display: inline-block;
+      margin: 7px auto auto 5px;
+      vertical-align: top;
+    }
+
+    @media (min-width: 375px) {
+      .handle {
+        float: right;
+        vertical-align: top;
+        margin: 8px 5px;
+
+        font-size: 1em;
+        color: #ccc;
+      }
+    }
+
+    @media (max-width: 375px) {
+      .handle {
+        float: right;
+        vertical-align: top;
+        margin: 8px 5px;
+
+        font-size: 0.6em;
+        color: #ccc;
+      }
+    }
+
+  }
+
+  .content {
+    min-height: 60px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+    padding: 5px 10px;
+    margin: 0;
+    vertical-align: middle;
+
+    display: flex;
+    align-items: center;
+    word-break: break-all;
+  }
+
+  footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .timestamp {
+      margin: 10px 5px;
+      font-size: 0.5em;
+    }
+
+    .likes{
+      display: flex;
+      align-items: center;
+
+      margin: 10px 5px;
+      font-size: 0.5em;
+
+      .like-symbol-wrapper {
+        display: flex;
+        align-items: center;
+        padding: 0;
+
+        border: none;
+        background-color: transparent;
+
+        .material-icons {
+          font-size: 2em;
+          color: grey;
+        }
+
+        .material-icons:hover, .material-icons.clicked {
+          color: red;
+        }
+      }
+    }
+  }
+}
+
+article.tweet:hover {
+  border: 1px solid #ccc;
+
+  header {
+    background-color: #eee;
+    filter: brightness(1);
+  }
+}
+
+
+
+
+
+
+
