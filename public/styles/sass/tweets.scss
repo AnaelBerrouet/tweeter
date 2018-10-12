@@ -4,6 +4,10 @@ article.tweet {
   margin: 2em;
 
   header {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
     background-color: #e1e1e1;
     height: 50px;
     filter: brightness(1.1);
@@ -15,13 +19,74 @@ article.tweet {
       border-radius: 5px;
     }
 
-    .name {
-      display: inline-block;
-      margin: 7px auto auto 5px;
-      vertical-align: top;
+    @media (min-width: 350px) {
+      .flex-header-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        .name {
+          display: inline-block;
+          margin: 7px auto auto 5px;
+          vertical-align: top;
+        }
+
+        .handle {
+          float: right;
+          vertical-align: top;
+          margin: 8px 5px;
+
+          font-size: 1em;
+          color: #ccc;
+        }
+      }
     }
 
-    @media (min-width: 375px) {
+    @media (max-width: 350px) {
+      .flex-header-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        .name {
+          display: inline-block;
+          margin: 7px auto auto 5px;
+          vertical-align: top;
+          font-size-adjust: 0.8
+        }
+
+        .handle {
+          float: right;
+          vertical-align: top;
+          margin: 3px 5px;
+
+          font-size: 0.8em;
+          color: #ccc;
+        }
+      }
+    }
+
+    /*@media (min-width: 350px) {
+      .name {
+        display: inline-block;
+        margin: 7px auto auto 5px;
+        vertical-align: top;
+      }
+    }
+
+    @media (max-width: 350px) {
+      .name {
+        display: inline-block;
+        margin: 7px auto auto 5px;
+        vertical-align: top;
+        font-size-adjust: 0.8
+      }
+    }
+
+
+    @media (min-width: 350px) {
       .handle {
         float: right;
         vertical-align: top;
@@ -32,7 +97,7 @@ article.tweet {
       }
     }
 
-    @media (max-width: 375px) {
+    @media (max-width: 350px) {
       .handle {
         float: right;
         vertical-align: top;
@@ -41,7 +106,7 @@ article.tweet {
         font-size: 0.6em;
         color: #ccc;
       }
-    }
+    }*/
 
   }
 

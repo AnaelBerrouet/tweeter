@@ -29,8 +29,10 @@ function buildTweetHeader(tweet) {
   let header = `
       <header>
         <img class="avatar" src="${tweet.user.avatars.small}">
-        <h3 class="name">${tweet.user.name}</h3>
-        <span class="handle">${tweet.user.handle}</span>
+        <span class="flex-header-container">
+          <h3 class="name">${tweet.user.name}</h3>
+          <span class="handle">${tweet.user.handle}</span>
+        </span>
       </header>
     `;
   return header;
