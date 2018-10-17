@@ -13,10 +13,16 @@ Built upon starter code forked from Lighthouse Labs and then built upon to pract
 
 1. Fork this repository, then clone your fork of this repository.
 2. Install dependencies using the `npm install` command.
-3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
-4. Go to <http://localhost:8080/> in your browser.
+3. Configure .env variable in order to specify database address to be connected. e.g: "MONGODB_URI=mongodb://127.0.0.1:27017/tweeter"
+4. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
+5. Go to <http://localhost:8080/> in your browser.
 
 ## Dependencies
 
-- Express
+- express 4.13.4
 - Node 5.10.x or above
+- body-parser 1.15.2
+- chance 1.0.2
+- dotenv 6.1.0
+- md5 2.1.0
+- mongodb 2.2.36
